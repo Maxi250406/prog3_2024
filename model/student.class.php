@@ -29,8 +29,7 @@ class Student{
 
     public function addStudent () {
       //crear consulta
-      $sql="INSERT INTO students (dni, surname, name, birthdate, telephone, adress, email, user, password, school) VALUES
-       (".$this->dni.",'".$this->surname."','".$this->name"','".$this->bithdate"','".$this->telephones"','".$this->adress"','".$this->email"','".$this->pasword"','".$this->school"');
+      $sql="DELETE FROM students WHERE idStudent=".$this->idStudent;
         $this->conexion=new Database ();
         $result= $this-> conexion->query ($sql); 
         $this-> conexion->close ();
@@ -40,15 +39,47 @@ class Student{
 
   }
 
-    public function editteStudent () {
+    public function editStudent () {
+      $sql="UPDATE students SET dni=".$this->dni.", surname='".$this->surname."', name='".$this->name"', birthdate='".$this->bithdate"', telephone='".$this->telephones"', adress='".$this->adress"', email='".$this->email"', password='".$this->pasword"', school='".$this->school"')
+     WHERE idstudent=".$this->idstudent;
+
+      $this->conexion=new Database ();
+      $result= $this-> conexion->query ($sql); 
+      $this-> conexion->close ();
+
+      return $result;
+
       
     }
 
     public function deleteStudent () {
-      
+      $sql="INSERT INTO students (dni, surname, name, birthdate, telephone, adress, email, user, password, school) VALUES
+      (".$this->dni.",'".$this->surname."','".$this->name"','".$this->bithdate"','".$this->telephones"','".$this->adress"','".$this->email"','".$this->pasword"','".$this->school"')";
+       $this->conexion=new Database ();
+       $result= $this-> conexion->query ($sql); 
+       $this-> conexion->close ();
     }
     public function getStudent () {
+      $sql="SELECT * FROM sdtudents WHERE idStudent=".$this->idStudent,"";
+      (".$this->dni.",'".$this->surname."','".$this->name"','".$this->bithdate"','".$this->telephones"','".$this->adress"','".$this->email"','".$this->pasword"','".$this->school"');
       
+      $this->conexion= new Database ();
+       $result= $this-> conexion->query ($sql); 
+       $this-> conexion->close ();
+       if ($result){
+        if($row=$result->fetch_assoc ()){
+          $this->$dni=$row["dni"];
+          $this-> $name=$row["name"];
+          $this->$birthdate=$row["birthdate"];
+          $this->$phone=$row["phone"];
+          $this->$adress=$row["adress"];
+          $this->$email=$row["email"];
+          $this->$password=$row["pasword"];
+          $this->$school=$row["school"];
+          return true;
+        }
+
+       }
     }
 
     public function getALLSStudent () {
