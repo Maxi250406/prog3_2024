@@ -47,11 +47,11 @@ CREATE TABLE `estudiantes` (
 --
 
 INSERT INTO `estudiantes` (`idStudent`, `dni`, `surname`, `name`, `birthname`, `telephone`, `adress`, `email`, `user`, `password`, `school`) VALUES
-(1, 44341300, 'ACUÑA ', 'CARO ANDRÉS NICOLÁS', '2002-12-05', '', '', '', 44341300, '44341300', 'Epet Nro3'),
-(2, 44342301, 'BAIGORRIA ', 'ARIANA AILIN ', '2003-02-03', '', '', '', 44342301, '44342301', 'Epet Nro3'),
-(3, 44341303, 'BENEITE BIRNE', 'KAREN ELISABET ', '2002-10-17', '', '', '', 44341303, '44341303', 'Epet Nro3'),
-(4, 44120304, 'BONINO ', 'ENZO  ', '2002-10-23', '', '', '', 44120304, '44120304', 'Epet Nro3'),
-(5, 44680305, 'BUFFAGNE ', 'TERESITA ANTONELA ', '2002-03-20', '', '', '', 44680305, '44680305', 'Epet Nro3');
+(1, 44341300, 'ACUÑA ', 'CARO ANDRÉS NICOLÁS', '2002-12-05', '', '', '', '44341300', 'Epet Nro3'),
+(2, 44342301, 'BAIGORRIA ', 'ARIANA AILIN ', '2003-02-03', '', '', '', , '44342301', 'Epet Nro3'),
+(3, 44341303, 'BENEITE BIRNE', 'KAREN ELISABET ', '2002-10-17', '', '', '', , '44341303', 'Epet Nro3'),
+(4, 44120304, 'BONINO ', 'ENZO  ', '2002-10-23', '', '', '', , '44120304', 'Epet Nro3'),
+(5, 44680305, 'BUFFAGNE ', 'TERESITA ANTONELA ', '2002-03-20', '', '', '', , '44680305', 'Epet Nro3');
 
 --
 -- Índices para tablas volcadas

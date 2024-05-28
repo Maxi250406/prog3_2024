@@ -93,6 +93,61 @@ class Student{
 public function SetIdStudent($Idstudent){
   $this->idStudent=$idStudent;
 }
-
+ public function getDni(){
+    return $this->dni;
+ }
+ public function setDni(){
+  return $this->dni=$dni;
+ }
+public function getName(){
+  return $this->name;
+}
+public function setName(){
+  return $this=$name;
   }
+
+public function getBirthday(){
+ return $this->birthday;
+}
+
+public function setBirthday(){
+return $this=$birthday;
+}
+
+public function getPhone(){
+return $this->Phone;
+}
+public function setphone(){
+ return $this=$phone;
+} 
+public function getAdress(){
+ return $this->name;
+ }
+  public function setAdress(){
+ return $this=$name;
+ }
+        
+public function getEmail(){
+return $this->Email;
+
+}
+ public function setEmail(){
+return $this=$Email;
+}
+            
+public function getPasword(){
+   return $this->Pawsord;
+}
+   public function setPasword(){
+  return $this=$Pasword;
+}
+                
+  public function getSchool(){
+  return $this->School;
+}
+                
+  public function setSchool(){
+  return $this=$School;
+}
+                    
 ?>
