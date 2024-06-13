@@ -71,6 +71,17 @@ class Student{
         return false;
     }
 
+public function getAllStudent(){
+
+    $sql="SELECT * FROM student";
+    $this->conexion = new Database();
+    $result = $this->conexion->query($sql);
+
+
+}
+
+
+
     // Getters y Setters
     public function getIdStudent(){
         return $this->idStudent;
